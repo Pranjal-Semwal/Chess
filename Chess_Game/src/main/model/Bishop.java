@@ -5,7 +5,7 @@ public class Bishop extends Piece{
         super(color);
     }
     @Override
-    public boolean isValidMove(int startRow, int startCol, int endRow, int endCol) {
+    public boolean isValidMove(int startRow, int startCol, int endRow, int endCol, Piece[][] board) {
         return true;
     }
 }
