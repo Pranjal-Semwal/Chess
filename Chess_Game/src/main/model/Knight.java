@@ -5,7 +5,12 @@ public class Knight extends Piece{
         super(color);
     }
     @Override
-    public boolean isValidMove(int startRow, int startCol, int endRow, int endCol) {
-        return true;
+    public boolean isValidMove(int sr, int sc, int er, int ec, Piece[][] board) {
+
+        int rowDiff = Math.abs(er - sr);
+        int colDiff = Math.abs(ec - sc);
+
+        return (rowDiff == 2 && colDiff == 1)
+                || (rowDiff == 1 && colDiff == 2);
     }
 }
